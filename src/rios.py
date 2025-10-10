@@ -35,4 +35,21 @@ def obtener_continentes_y_rios(rios:list[Rio])->list[tuple[str,str]]:
 
 # EJERCICIO 4:
 def contar_diferentes_continentes(rios:list[Rio])->int:
+    res = 0
+    for p in rios:
+        if p.longitud >= 6300:
+            res += 1
+    
+    return res
+
+# EJERCICIO 5:
+def suma_longitudes(rios:list[Rio],continentes:set[str])->int:
+    res = 0
+    for p in rios:
+        if p.continente in continentes:
+            res += p.longitud
+    return res
+
+# EJERCICIO 6:
+def rio_con_nombre_más_corto(rios:list[Rio],continentes:set[str])->str:
 
