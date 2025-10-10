@@ -23,5 +23,10 @@ def filtra_rios_de_continente(rios:list[Rio], continente:str)->list[Rio]:
     for p in rios:
         if p.continente == continente:
             res.append(p)
-    return res
+    return res 
+
+# EJERCICIO 3:
+def obtener_continentes_y_rios(rios:list[Rio])->list[tuple[str,str]]:
+
+    pass
 

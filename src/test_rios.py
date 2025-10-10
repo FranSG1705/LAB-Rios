@@ -8,11 +8,14 @@ def test_carga_rios(rios:list[Rio])->None:
         print (carga_rios()[n])
         n = n+1
 
-def
+def test_filtra_rios_de_continente(rios, continente):
+    print("\n2. Test_filtra_rios_de_continente")
+    print(f'Para el continente {continente} --> {filtra_rios_de_continente(rios, continente)}')
 
 
-
+    
 
 if __name__=='__main__':
-    rios=carga_rios()
+    rios = carga_rios()
     test_carga_rios(rios)
+    test_filtra_rios_de_continente(rios, 'Asia')
