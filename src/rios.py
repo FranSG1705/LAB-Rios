@@ -27,6 +27,12 @@ def filtra_rios_de_continente(rios:list[Rio], continente:str)->list[Rio]:
 
 # EJERCICIO 3:
 def obtener_continentes_y_rios(rios:list[Rio])->list[tuple[str,str]]:
+    res = []
+    for p in rios:
+        res.append((p.continente, p.nombre))
+    
+    return sorted(res, key=lambda x: x[1])
 
-    pass
+# EJERCICIO 4:
+def contar_diferentes_continentes(rios:list[Rio])->int:
 
