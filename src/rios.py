@@ -59,3 +59,18 @@ def rio_con_nombre_más_corto(rios:list[Rio], continentes:set[str])->str:
 
     return min(res, key=len)
 
+# EJERCICIO 7:
+def nombres_3_rios_longitud(rios:list[Rio],más_largos:bool)->list[str]:
+    lista = []
+    for p in rios:
+        lista.append((p.nombre, p.longitud))
+    lista = sorted(lista, key=lambda x: x[1])   ##Ordenamos los rios de menor a mayor
+    
+    if más_largos == True:
+        lista = lista[-3:]
+    else:
+        lista = lista[:3]
+    res = [nombre for nombre, _ in lista]
+    
+    return res
+
